@@ -5,8 +5,11 @@
  */
 package myfirsthibernateapplicationsecondtry;
 
+import View.MyView;
 import Controller.MyController;
-import MyModel.TheModels.TopModel;
+import Model.TheModels.MyTopModel;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -14,17 +17,25 @@ import MyModel.TheModels.TopModel;
  */
 public class MyFirstHibernateApplicationSecondTry {
 
+    
+    public MyFirstHibernateApplicationSecondTry() {
+        MyView view = new MyView();
+        MyTopModel model = new MyTopModel();
+        MyController cont = new MyController(view, model);
+        
+        view.setLocationRelativeTo(null);
+        view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        view.setResizable(false);
+        view.setVisible(true);
+    }
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        MyView view = new MyView();
-        TopModel model = new TopModel();
-        MyController cont = new MyController(view, model);
-        
-        view.setVisible(true);
+        SwingUtilities.invokeLater(() -> { 
+            new MyFirstHibernateApplicationSecondTry();
+        });
     }
     
 }

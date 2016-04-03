@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/didrik/Google%20Drive/JavaProjekt/NetBeansProjects/MyFirstHibernateApplicationSecondTry/src/MyModel/TheModels/PersonModel.java</file>
-            <file>file:/C:/Users/didrik/Google%20Drive/JavaProjekt/NetBeansProjects/MyFirstHibernateApplicationSecondTry/src/myfirsthibernateapplicationsecondtry/MyView.java</file>
+            <file>file:/C:/Users/didrik/Google%20Drive/JavaProjekt/NetBeansProjects/MyFirstHibernateApplicationSecondTry/src/Model/TheModels/PersonModel.java</file>
+            <file>file:/C:/Users/didrik/Google%20Drive/JavaProjekt/NetBeansProjects/MyFirstHibernateApplicationSecondTry/src/myfirsthibernateapplicationsecondtry/MyFirstHibernateApplicationSecondTry.java</file>
+            <file>file:/C:/Users/didrik/Google%20Drive/JavaProjekt/NetBeansProjects/MyFirstHibernateApplicationSecondTry/src/Model/DAOService/PersonService.java</file>
+            <file>file:/C:/Users/didrik/Google%20Drive/JavaProjekt/NetBeansProjects/MyFirstHibernateApplicationSecondTry/src/View/MyView.java</file>
             <file>file:/C:/Users/didrik/Google%20Drive/JavaProjekt/NetBeansProjects/MyFirstHibernateApplicationSecondTry/src/Controller/MyController.java</file>
         </group>
     </open-files>

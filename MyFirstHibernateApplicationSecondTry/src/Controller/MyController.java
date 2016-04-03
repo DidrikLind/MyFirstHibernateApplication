@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import MyModel.TheModels.TopModel;
+import Model.TheModels.MyTopModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -13,7 +13,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-import myfirsthibernateapplicationsecondtry.MyView;
+import View.MyView;
 
 /**
  *
@@ -22,7 +22,7 @@ import myfirsthibernateapplicationsecondtry.MyView;
 public class MyController {
     
     private MyView view;
-    private TopModel topModel;
+    private MyTopModel topModel;
     
     //TODO, model reference somehow here asewll.
     
@@ -30,25 +30,14 @@ public class MyController {
         
     }
     
-    public MyController(MyView view, TopModel topModel) {
+    public MyController(MyView view, MyTopModel topModel) {
         this.view = view;
         this.topModel = topModel;
         
-        view.addTxtFieldListener(new TxtFieldListener());
         view.addCRUDButtonListener(new CRUDButtonListener());
         view.addTheTableListener(new TheTableListener());
     }
-    /** @TODO might not need this, lets see what time tells us. */
-    private class TxtFieldListener implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent ae) {
-            JTextField tObj = (JTextField) ae.getSource();
-
-        }        
-    }
     
-    /** @TODO make it work with the future model! */
     private class CRUDButtonListener implements ActionListener {
 
         @Override
@@ -73,14 +62,12 @@ public class MyController {
             }else {
                 //refresh
                 System.out.println("HEllo refresh me ;)");
-                
-//                view.resetMainTable();
-                view.getMainTable().setModel(topModel.getPersonModel()
-                                                     .getPersonTable());                
+                for(int i=0; i<tObj.length; i++)
+                    tObj[i].setText("");                
             }
-            
-            view.getMainTable().revalidate();
-            view.getMainTable().repaint();
+            view.clearMainTable();
+            view.getMainTable().setModel(topModel.getPersonModel()
+                                                 .getPersonTable());
         }
     }
     
@@ -93,10 +80,8 @@ public class MyController {
         public void mouseClicked(MouseEvent mevt) {
             table = view.getMainTable();
             txtFields = view.getTextFields();
-            String text;
             //changfe data in JTextFields to clicked row.
             if(table.getSelectedRow()!=-1) {
-                //weird problem fix l8r
                 for(int i=0; i<txtFields.length; i++) {      
                     try {
                         txtFields[i].setText(table.getValueAt(table.getSelectedRow(),i).toString());
