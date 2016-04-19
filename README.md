@@ -16,7 +16,9 @@
 <h3>Vilka andra teknologier liknar Hibernate? Finns det något bättre alternativ än Hibernate?</h3>
 <p>Det finns andra alternativ, såsom MyBatis, jOOQ eller Sormula. Dock är Hibernate väldigt populärt, och används inom Spring-ramverket.</p>
 
-<h3>Vilka andra teknologier är Hibernate beroende av (eller använder sig av)? Behöver man kunna något mer än Hibernate?</h3>
+<h3>Vilka andra teknologier är Hibernate beroende av (eller använder sig av)?
+Behöver man kunna något mer än Hibernate?</h3>
+<p>Hibernate använder sig av JDBC för att komminucera med databasen</p>
 <p>Kan vara bra att kunna SQL tänket eftersom man lär sig använda jar filer vad det gäller drivrutiner till ens databas, tex Oracle, Sqlite osv. Dessutom om man är van vid HTML, då man skriver konfigurations-filerna i XML-format, så är det en fördel.</p>
 
 <h3>Kan ni skriva ett exempel med en klass som mappas till en databas med Hibernate? (hitta ngn tutorial/material till hjälp!)</h3>
